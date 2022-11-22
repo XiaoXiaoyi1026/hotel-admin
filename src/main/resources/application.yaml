@@ -1,0 +1,28 @@
+server:
+#  服务端口
+  port: 8099
+spring:
+#  mysql数据库
+  datasource:
+    url: jdbc:mysql://localhost:3306/xiaoxiaoyi?useSSL=false
+    username: root
+    password: 1026
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    消息队列相关配置
+  rabbitmq:
+    host: 10.190.67.128
+    port: 5672
+    username: xiaoxiaoyi
+    password: 1026
+    virtual-host: /
+# 日志相关配置
+logging:
+  level:
+    cn.itcast: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+# mybatis-plus
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: cn.itcast.hotel.pojo
